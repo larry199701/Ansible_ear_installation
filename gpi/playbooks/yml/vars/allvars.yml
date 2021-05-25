@@ -1,0 +1,12 @@
+username: 420018
+password: "{xor}EjY8Nzozbm8="
+deployjythonfile: ~/larrytest/deploy.py
+undeployjythonfile: ~/larrytest/undeploy.py
+shStopfile: stopDmgr.sh
+shStartfile: startDmgr.sh
+hostname: dev-dmgr01.gpi.com
+conntype: SOAP
+soapport: 8879
+
+
+

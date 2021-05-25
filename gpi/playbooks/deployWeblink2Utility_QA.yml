@@ -1,0 +1,44 @@
+---
+- name: deploying Weblink2Utility
+  hosts: qadmgr
+  user: a420018
+  become: yes
+  become_method: sudo
+  become_user: wasadmin
+  vars:
+    Weblink2Utility_version: 1.8.2.17 
+
+  vars_prompt:
+#  - name: username
+#    prompt: "Username for wsadmin.sh"
+#    private: no
+#  - name: password
+#    prompt: "Password for wsadmin.sh"
+
+  tasks:
+  - name: copy both .ear file & jython scripts to remote
+    copy:
+      src: "{{ item }}"
+      dest: ~/larrytest/ 
+      force: yes 
+      mode: 0744
+    with_items:
+      - /cygdrive/c/backup/gpi_deploy/Weblink2Utility/Weblink2Utility.{{ Weblink2Utility_version }}.ear
+      - ./py/deployWeblink2Utility_QA.py
+      - ./sh/deployWeblink2Utility_QA.sh
+      - ./sh/incl/dmgr_addto_soap_client_props.sh
+      - ./sh/incl/dmgr_remfrom_soap_client_props.sh
+
+  - name: include variable file
+    include_vars: yml/vars/allvars.yml
+
+  - name: run shell script
+    shell: ~/larrytest/deployWeblink2Utility_QA.sh "{{username}}" "{{password}}" "{{Weblink2Utility_version}}"
+    register: output
+  - debug:
+       var=output.stdout_lines
+
+
+
+
+

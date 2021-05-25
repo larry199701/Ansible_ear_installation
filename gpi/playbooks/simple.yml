@@ -1,0 +1,16 @@
+---
+- name: simple
+  hosts: dev
+  user: a420018
+  become: yes
+  become_method: sudo
+  become_user: wasadmin
+  tasks:
+  - name: create a test file
+    copy:
+      content: "created here by ansible larry!"
+      dest: ~/larry_test.txt
+      force: no
+      mode: 0444
+...
+

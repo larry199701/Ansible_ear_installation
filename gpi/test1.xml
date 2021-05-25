@@ -1,0 +1,12 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:veh="http://ws.carquest.com/2006/services/vehicle" xmlns:veh1="http://ws.carquest.com/2006/types/vehicle">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <veh:findVehicle>
+         <veh:vehicle>
+            <veh1:year>2001</veh1:year>
+         </veh:vehicle>
+         <veh:attribute>make</veh:attribute>
+      </veh:findVehicle>
+   </soapenv:Body>
+</soapenv:Envelope>
+

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.etools.webservice.wscbnd:ClientBinding xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.etools.webservice.wscbnd="http://www.ibm.com/websphere/appserver/schemas/5.0.2/wscbnd.xmi" xmi:id="ClientBinding_1391545162359">
+  <componentScopedRefs xmi:id="ComponentScopedRefs_1391545162359" componentNameLink="OrderHttpImpl">
+    <serviceRefs xmi:id="ServiceRef_1391545162359" serviceRefLink="service/VehicleService">
+      <portQnameBindings xmi:id="PortQnameBinding_1391545162359" portQnameNamespaceLink="http://ws.carquest.com/2006/services/vehicle" portQnameLocalNameLink="VehicleHttpPort" overriddenEndpointURI="http://dpdev01i.gpi.com:6510/2006/services/VehicleHttpPort"/>
+    </serviceRefs>
+    <serviceRefs xmi:id="ServiceRef_1391627208433" serviceRefLink="service/InventoryServiceService">
+      <portQnameBindings xmi:id="PortQnameBinding_1391627208433" portQnameNamespaceLink="http://ws.wins.gpit.com/" portQnameLocalNameLink="InventoryServicePort" overriddenEndpointURI="http://dev-web01.gpi.com:80/InventoryServiceWeb/InventoryServiceService"/>
+    </serviceRefs>
+    <serviceRefs xmi:id="ServiceRef_1391629371044" serviceRefLink="service/GpiPaoService">
+      <portQnameBindings xmi:id="PortQnameBinding_1391629371044" portQnameNamespaceLink="http://schema.whisolutions.com/PartsWatch/1.0/BrandedGpi/GpiPaoService" portQnameLocalNameLink="GpiPaoServiceSOAP" overriddenEndpointURI="http://dev-exfeed01.gpi.com/link/WebService/BrandedGpi/GpiPaoService.php"/>
+    </serviceRefs>
+    <serviceRefs xmi:id="ServiceRef_1391630110711" serviceRefLink="service/TransactionLogServiceService">
+      <portQnameBindings xmi:id="PortQnameBinding_1391630110711" portQnameNamespaceLink="http://ws.transactionlog.gpit.com/" portQnameLocalNameLink="TransactionLogServicePort" overriddenEndpointURI="http://dev-web01.gpi.com:80/TransactionLogServiceWeb/TransactionLogServiceService"/>
+      <portQnameBindings xmi:id="PortQnameBinding_1591819359893" portQnameNamespaceLink="http://ws.transactionlog.gpit.com/" portQnameLocalNameLink="TransactionLogServicePortJMS"/>
+    </serviceRefs>
+    <serviceRefs xmi:id="ServiceRef_1409331348744" serviceRefLink="service/AAPExt/InventoryService">
+      <portQnameBindings xmi:id="PortQnameBinding_1409331348744" portQnameNamespaceLink="http://inventory.service.cwsadapter.ecomm.advancestores.com/" portQnameLocalNameLink="InventoryPort" overriddenEndpointURI="http://cwsappqa01.corp.advancestores.com:9480/CWSAdapter/Inventory"/>
+    </serviceRefs>
+    <serviceRefs xmi:id="ServiceRef_1409331350893" serviceRefLink="service/AAPExt/AccountStatusService">
+      <portQnameBindings xmi:id="PortQnameBinding_1409331350893" portQnameNamespaceLink="http://accountstatus.service.cwsadapter.ecomm.advancestores.com/" portQnameLocalNameLink="AccountStatusPort" overriddenEndpointURI="http://cwsappqa01.corp.advancestores.com:9480/CWSAdapter/AccountStatus"/>
+    </serviceRefs>
+    <serviceRefs xmi:id="ServiceRef_1409331353186" serviceRefLink="service/AAPExt/OrderFulfillmentService">
+      <portQnameBindings xmi:id="PortQnameBinding_1409331353186" portQnameNamespaceLink="http://orderfulfillment.service.cwsadapter.ecomm.advancestores.com/" portQnameLocalNameLink="OrderFulfillmentPort" overriddenEndpointURI="http://cwsappqa01.corp.advancestores.com:9480/CWSAdapter/OrderFulfillment"/>
+    </serviceRefs>
+    <serviceRefs xmi:id="ServiceRef_1409331353187" serviceRefLink="service/AAPExt/OrderQuoteService">
+      <portQnameBindings xmi:id="PortQnameBinding_1409331353187" portQnameNamespaceLink="http://orderquote.service.cwsadapter.ecomm.advancestores.com/" portQnameLocalNameLink="OrderQuotePort" overriddenEndpointURI="http://cwsappqa01.corp.advancestores.com:9480/CWSAdapter/OrderQuote"/>
+    </serviceRefs>
+    <serviceRefs xmi:id="ServiceRef_1409331353119" serviceRefLink="service/IndependentsService">
+      <portQnameBindings xmi:id="PortQnameBinding_1409331353119" portQnameNamespaceLink="http://independents.services.advancestores.com/" portQnameLocalNameLink="IndependentsInterface" overriddenEndpointURI="http://cwsappqa01:8980/independents/IndependentsService"/>
+    </serviceRefs>
+    <serviceRefs xmi:id="ServiceRef_1575907634133" serviceRefLink="service/PartsCrossReferenceService">
+      <portQnameBindings xmi:id="PortQnameBinding_1575907634133" portQnameNamespaceLink="http://www.advancestores.com/parts/xref" portQnameLocalNameLink="PartsCrossReferenceSoap11" overriddenEndpointURI="http://wcentprd02:8380/CrossReferenceIntegration/partsXrefService"/>
+    </serviceRefs>
+    <serviceRefs xmi:id="ServiceRef_1576605245850" serviceRefLink="service/CQProInventoryService">
+      <portQnameBindings xmi:id="PortQnameBinding_1576605245850" portQnameNamespaceLink="http://inventory.service.cqpro.ecomm.advancestores.com/" portQnameLocalNameLink="CQProInventoryPort" overriddenEndpointURI="https://cwsappqa01.corp.advancestores.com:15000/B2BAdapter/ws"/>
+      <portQnameBindings xmi:id="PortQnameBinding_1591819359894" portQnameNamespaceLink="http://inventory.service.cwsadapter.ecomm.advancestores.com/" portQnameLocalNameLink="CQProInventoryPort"/>
+    </serviceRefs>
+    <serviceRefs xmi:id="ServiceRef_1576620875542" serviceRefLink="service/CQProOrderFulfillmentService">
+      <portQnameBindings xmi:id="PortQnameBinding_1576620875542" portQnameNamespaceLink="http://orderfulfillment.service.cqpro.ecomm.advancestores.com/" portQnameLocalNameLink="CQProOrderFulfillmentPort" overriddenEndpointURI="https://cwsappqa01.corp.advancestores.com:15004/FulfillmentService/ws"/>
+      <portQnameBindings xmi:id="PortQnameBinding_1591819359895" portQnameNamespaceLink="http://orderfulfillment.service.cwsadapter.ecomm.advancestores.com/" portQnameLocalNameLink="CQProOrderFulfillmentPort"/>
+    </serviceRefs>
+    <serviceRefs xmi:id="ServiceRef_1576680117018" serviceRefLink="service/CQProOrderReviewService">
+      <portQnameBindings xmi:id="PortQnameBinding_1576680117018" portQnameNamespaceLink="http://orderreview.service.cqpro.ecomm.advancestores.com/" portQnameLocalNameLink="CQProOrderReviewPort" overriddenEndpointURI="https://cwsappqa01.corp.advancestores.com:15004/FulfillmentService/ws"/>
+      <portQnameBindings xmi:id="PortQnameBinding_1591819359896" portQnameNamespaceLink="http://orderreview.service.cwsadapter.ecomm.advancestores.com/" portQnameLocalNameLink="CQProOrderReviewPort"/>
+    </serviceRefs>
+  </componentScopedRefs>
+  <componentScopedRefs xmi:id="ComponentScopedRefs_1391545940438" componentNameLink="PartHttpImpl">
+    <serviceRefs xmi:id="ServiceRef_1391545940438" serviceRefLink="service/VehicleService">
+      <portQnameBindings xmi:id="PortQnameBinding_1391545940438" portQnameNamespaceLink="http://ws.carquest.com/2006/services/vehicle" portQnameLocalNameLink="VehicleHttpPort" overriddenEndpointURI="http://dpqa01i.gpi.com:6510/2006/services/VehicleHttpPort"/>
+    </serviceRefs>
+    <serviceRefs xmi:id="ServiceRef_1391627208433" serviceRefLink="service/InventoryServiceService">
+      <portQnameBindings xmi:id="PortQnameBinding_1391627208433" portQnameNamespaceLink="http://ws.wins.gpit.com/" portQnameLocalNameLink="InventoryServicePort" overriddenEndpointURI="http://dev-web01.gpi.com:80/InventoryServiceWeb/InventoryServiceService"/>
+    </serviceRefs>
+    <serviceRefs xmi:id="ServiceRef_1391629371044" serviceRefLink="service/GpiPaoService">
+      <portQnameBindings xmi:id="PortQnameBinding_1391629371044" portQnameNamespaceLink="http://schema.whisolutions.com/PartsWatch/1.0/BrandedGpi/GpiPaoService" portQnameLocalNameLink="GpiPaoServiceSOAP" overriddenEndpointURI="http://dev-exfeed01.gpi.com/link/WebService/BrandedGpi/GpiPaoService.php"/>
+    </serviceRefs>
+    <serviceRefs xmi:id="ServiceRef_1391630110711" serviceRefLink="service/TransactionLogServiceService">
+      <portQnameBindings xmi:id="PortQnameBinding_1391630110711" portQnameNamespaceLink="http://ws.transactionlog.gpit.com/" portQnameLocalNameLink="TransactionLogServicePort" overriddenEndpointURI="http://dev-web01.gpi.com:80/TransactionLogServiceWeb/TransactionLogServiceService"/>
+      <portQnameBindings xmi:id="PortQnameBinding_1591819359897" portQnameNamespaceLink="http://ws.transactionlog.gpit.com/" portQnameLocalNameLink="TransactionLogServicePortJMS"/>
+    </serviceRefs>
+    <serviceRefs xmi:id="ServiceRef_1409331348744" serviceRefLink="service/AAPExt/InventoryService">
+      <portQnameBindings xmi:id="PortQnameBinding_1409331348744" portQnameNamespaceLink="http://inventory.service.cwsadapter.ecomm.advancestores.com/" portQnameLocalNameLink="InventoryPort" overriddenEndpointURI="http://cwsappqa01.corp.advancestores.com:9480/CWSAdapter/Inventory"/>
+    </serviceRefs>
+    <serviceRefs xmi:id="ServiceRef_1409331353119" serviceRefLink="service/IndependentsService">
+      <portQnameBindings xmi:id="PortQnameBinding_1409331353119" portQnameNamespaceLink="http://independents.services.advancestores.com/" portQnameLocalNameLink="IndependentsInterface" overriddenEndpointURI="http://cwsappqa01:8980/independents/IndependentsService"/>
+    </serviceRefs>
+    <serviceRefs xmi:id="ServiceRef_1576605245850" serviceRefLink="service/CQProInventoryService">
+      <portQnameBindings xmi:id="PortQnameBinding_1576605245850" portQnameNamespaceLink="http://inventory.service.cqpro.ecomm.advancestores.com/" portQnameLocalNameLink="CQProInventoryPort" overriddenEndpointURI="https://cwsappqa01.corp.advancestores.com:15000/B2BAdapter/ws"/>
+      <portQnameBindings xmi:id="PortQnameBinding_1591819359898" portQnameNamespaceLink="http://inventory.service.cwsadapter.ecomm.advancestores.com/" portQnameLocalNameLink="CQProInventoryPort"/>
+    </serviceRefs>
+  </componentScopedRefs>
+</com.ibm.etools.webservice.wscbnd:ClientBinding>

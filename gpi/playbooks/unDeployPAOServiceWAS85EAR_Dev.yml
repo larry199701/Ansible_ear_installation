@@ -1,0 +1,42 @@
+---
+- name: simple
+  hosts: devdmgr
+  user: a420018
+  become: yes
+  become_method: sudo
+  become_user: wasadmin
+
+  vars:
+    PAOServiceWAS85EAR_version: PAO_2_16.2.16.0.27
+  vars_prompt:
+#  - name: username
+#    prompt: "Username for wsadmin.sh"
+#    private: no
+#  - name: password
+#    prompt: "Password for wsadmin.sh"
+
+  tasks:
+  - name: copy both .ear file & jython scripts to remote
+    copy:
+      src: "{{ item }}"
+      dest: ~/larrytest/ 
+      force: yes 
+      mode: 0744
+    with_items:
+      - ./py/unDeployPAOServiceWAS85EAR_Dev.py
+      - ./sh/unDeployPAOServiceWAS85EAR_Dev.sh
+      - ./sh/incl/dmgr_addto_soap_client_props.sh
+      - ./sh/incl/dmgr_remfrom_soap_client_props.sh
+
+  - name: include variable file
+    include_vars: yml/vars/allvars.yml
+
+  - name: run shell script
+    shell: ~/larrytest/unDeployPAOServiceWAS85EAR_Dev.sh "{{username}}" "{{password}}" "{{PAOServiceWAS85EAR_version}}"
+    register: output
+  - debug:
+       var=output.stdout_lines
+
+
+
+

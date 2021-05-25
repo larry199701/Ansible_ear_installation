@@ -1,0 +1,6 @@
+- name: copy the message to the remote host
+  copy:
+    content: "{{message}}"
+    dest: "{{dst}}"
+    force: "{{foc}}"
+    mode: "{{md}}"
